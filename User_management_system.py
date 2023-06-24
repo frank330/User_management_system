@@ -9,7 +9,7 @@ import tkinter.messagebox
 
 
 # 连接mysql
-conn = pymysql.connect(host='127.0.0.1', user='root', password='man670419')
+conn = pymysql.connect(host='127.0.0.1', user='root', password='123456')
 # 获取连接的游标
 cur = conn.cursor()
 
@@ -32,7 +32,7 @@ def make_window(theme):
     # 菜单栏
     menu_def = [['Help', ['About...', ['你好']]], ]
     # 连接mysql
-    conn = pymysql.connect(host='127.0.0.1', user='root', password='man670419', database='test', charset='UTF8MB4')
+    conn = pymysql.connect(host='127.0.0.1', user='root', password='123456', database='test', charset='UTF8MB4')
     cur = conn.cursor()
 
 
@@ -212,7 +212,7 @@ def make_window(theme):
 def Registration():
 
 
-    conn = pymysql.connect(host='127.0.0.1', user='root', password='man670419', database='test', charset='UTF8MB4')
+    conn = pymysql.connect(host='127.0.0.1', user='root', password='123456', database='test', charset='UTF8MB4')
     cur = conn.cursor()
 
     # 创建表
@@ -295,7 +295,7 @@ def Registration():
 
 # 用户登录界面
 def Sign_in():
-    conn = pymysql.connect(host='127.0.0.1', user='root', password='man670419', database='test', charset='UTF8MB4')
+    conn = pymysql.connect(host='127.0.0.1', user='root', password='123456', database='test', charset='UTF8MB4')
     cur = conn.cursor()
     sql2 = 'select id,psd from users_'
 
@@ -362,8 +362,6 @@ def Sign_in():
     window0.mainloop()
 
 if __name__ == '__main__':
-    # make_window(sg.theme())
-    # Registration()
-
+    Sign_in()
     Sign_in()
     # make_window(sg.theme())
